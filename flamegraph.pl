@@ -1046,8 +1046,8 @@ while (my ($id, $node) = each %Node) {
 	my $x2 = $xpad + $etime * $widthpertime;
 	my ($y1, $y2);
 	unless ($inverted) {
-		$y1 = $imageheight - $ypad2 - ($depth + 1) * $frameheight + $framepad;
-		$y2 = $imageheight - $ypad2 - $depth * $frameheight;
+		$y1 = $imageheight - ($depth + 1) * $frameheight + $framepad;
+		$y2 = $imageheight - $depth * $frameheight;
 	} else {
 		$y1 = $ypad1 + $depth * $frameheight;
 		$y2 = $ypad1 + ($depth + 1) * $frameheight - $framepad;
