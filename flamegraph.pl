@@ -1010,7 +1010,7 @@ my $inc = <<INC;
 ]]>
 </script>
 INC
-$im->include($inc);
+#$im->include($inc);
 $im->filledRectangle(0, 0, $imagewidth, $imageheight, 'url(#background)');
 my ($white, $black, $vvdgrey, $vdgrey, $dgrey) = (
 	$im->colorAllocate(255, 255, 255),
@@ -1023,12 +1023,12 @@ $im->stringTTF($black, $fonttype, $fontsize + 5, 0.0, int($imagewidth / 2), $fon
 if ($subtitletext ne "") {
 	$im->stringTTF($vdgrey, $fonttype, $fontsize, 0.0, int($imagewidth / 2), $fontsize * 4, $subtitletext, "middle");
 }
-$im->stringTTF($black, $fonttype, $fontsize, 0.0, $xpad, $imageheight - ($ypad2 / 2), " ", "", 'id="details"');
-$im->stringTTF($black, $fonttype, $fontsize, 0.0, $xpad, $fontsize * 2,
-    "Reset Zoom", "", 'id="unzoom" onclick="unzoom()" style="opacity:0.0;cursor:pointer"');
-$im->stringTTF($black, $fonttype, $fontsize, 0.0, $imagewidth - $xpad - 100,
-    $fontsize * 2, "Search", "", 'id="search" onmouseover="searchover()" onmouseout="searchout()" onclick="search_prompt()" style="opacity:0.1;cursor:pointer"');
-$im->stringTTF($black, $fonttype, $fontsize, 0.0, $imagewidth - $xpad - 100, $imageheight - ($ypad2 / 2), " ", "", 'id="matched"');
+#$im->stringTTF($black, $fonttype, $fontsize, 0.0, $xpad, $imageheight - ($ypad2 / 2), " ", "", 'id="details"');
+#$im->stringTTF($black, $fonttype, $fontsize, 0.0, $xpad, $fontsize * 2,
+#    "Reset Zoom", "", 'id="unzoom" onclick="unzoom()" style="opacity:0.0;cursor:pointer"');
+#$im->stringTTF($black, $fonttype, $fontsize, 0.0, $imagewidth - $xpad - 100,
+#    $fontsize * 2, "Search", "", 'id="search" onmouseover="searchover()" onmouseout="searchout()" onclick="search_prompt()" style="opacity:0.1;cursor:pointer"');
+#$im->stringTTF($black, $fonttype, $fontsize, 0.0, $imagewidth - $xpad - 100, $imageheight - ($ypad2 / 2), " ", "", 'id="matched"');
 
 if ($palette) {
 	read_palette();
